@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <title>Learn Vanilla JS</title>
+
+    <style type="text/css">
+      body {
+        margin: auto;
+        max-width: 40em;
+        width: 88%;
+      }
+      .accordion {
+        display: none;
+      }
+      .accordion.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Simple Accordion</h1>
+
+    <p><a class="accordion-toggle" href="#content-1">Show More 1</a></p>
+    <div class="accordion" id="content-1">
+      <h2>Anchor's Away!</h2>
+      <p>
+        Fore furl holystone mutiny lugsail hempen halter Brethren of the Coast
+        Corsair. Loaded to the gunwalls lookout brig hands blow the man down
+        case shot jolly boat hempen halter. Gun gunwalls chase guns furl
+        hornswaggle dance the hempen jig yard hail-shot. Pressgang quarterdeck
+        prow lugger spanker fluke broadside reef.
+      </p>
+    </div>
+
+    <p><a class="accordion-toggle" href="#content-2">Show More 2</a></p>
+    <div class="accordion" id="content-2">
+      <h2>Man O' War</h2>
+      <p>
+        Man-of-war booty brigantine fire ship tack no prey, no pay wherry lee.
+        Reef heave to line chandler fore cable smartly me. Avast list spanker
+        Arr fathom American Main lookout grapple. Jolly boat black spot chandler
+        list chantey pinnace brig Yellow Jack.
+      </p>
+    </div>
+
+    <p><a class="accordion-toggle" href="#content-3">Show More 3</a></p>
+    <div class="accordion" id="content-3">
+      <h2>Corsair</h2>
+      <p>
+        Line Corsair haul wind pink provost hardtack keelhaul hang the jib.
+        Splice the main brace matey hornswaggle strike colors run a shot across
+        the bow cackle fruit hang the jib jack. Sheet bounty wherry nipperkin
+        belay flogging Chain Shot main sheet. Lad Spanish Main barque port
+        smartly Chain Shot deadlights Jack Ketch.
+      </p>
+    </div>
+
+    <script>
+      document.addEventListener(
+        "click",
+        function (event) {
+          if (!event.target.classList.contains("accordion-toggle")) return;
+          let content = document.querySelector(event.target.hash);
+          if (!content) return;
+          event.preventDefault();
+          if (content.classList.contains("active")) {
+            content.classList.remove("active");
+            return;
+          }
+          const accordions = document.querySelectorAll(".accordion");
+          for (let i = 0; i < accordions.length; i++) {
+            accordions[i].classList.remove("active");
+          }
+          content.classList.add("active");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
