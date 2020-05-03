@@ -51,11 +51,28 @@ Example - S = 'aabbccdeefgg' => 'd'
 </li>
 
 <li>
-maxiumContigousSumArray - Given an array, find the maximum sum of contigous elemets. 
+maxiumContigousSumArray - Given an array, find the maximum sum of contiguous elements. 
 Example - arr = [-2, -3, 4, -1, -2, 1, 5, -3] => maximumSum = 7;
 </li>
 
 <li>
-minimumSumPairInArray - Given an array, find the minimum sum of two elemets. 
+minimumSumPairInArray - Given an array, find the minimum sum of two elements. 
 Example - arr = [-2, -3, 4, -1, -2, 1, 5, -3] => minimumSum = -6;
+</li>
+
+<li>
+firstBadVersion - You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one,
+which causes all the following ones to be bad.
+You are given an API bool isBadVersion(version) which will return whether version is bad.
+Implement a function to find the first bad version. You should minimize the number of calls to the API.
+
+</li>
+
+<li>
+jewelsAndStones - You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
 </li>
