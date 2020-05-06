@@ -59,7 +59,11 @@ Example - arr = [-2, -3, 4, -1, -2, 1, 5, -3] => maximumSum = 7;
 minimumSumPairInArray - Given an array, find the minimum sum of two elements. 
 Example - arr = [-2, -3, 4, -1, -2, 1, 5, -3] => minimumSum = -6;
 </li>
+</ul>
 
+<section> 
+<h3> Problems from Leet Code May challenge follow: </h3>
+<ul>
 <li>
 firstBadVersion - You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
@@ -76,3 +80,28 @@ jewelsAndStones - You're given strings J representing the types of stones that a
 The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
 </li>
+
+</ul>
+</section>
+
+<section>
+<h3> Problems from HackerRank follow: </h3>
+<ul>
+
+<li>
+plusMinus - Given an array of numbers, find the number of positive, negative and zero numbers and return the fraction of thee numbers in the array. Fraction is calculated as totalPositive/length of the array.
+</li>
+
+<li>
+diagonalDifference - Given a matrix, print the absolute difference of the left and the right diagonals.
+</li>
+
+<li>
+aVeryBigSum - Given an array of large integer values, return their sum.
+</li>
+
+<li>
+compareTriplets - Given an two arrays(a,b) of n elements, compare a[n] and b[n] and return count of times the value is greater in an array.
+</li>
+
+</section>
