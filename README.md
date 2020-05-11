@@ -62,6 +62,15 @@ Example - arr = [-2, -3, 4, -1, -2, 1, 5, -3] => minimumSum = -6;
 </ul>
 
 <section> 
+<h3> Problems from GfG's Amazon SDE Test Series follow: </h3>
+<ul>
+<li>
+thirdLargest - Given an array of n elements, return the 3rd largest element in the array
+</li>
+</ul>
+</section>
+
+<section> 
 <h3> Problems from Leet Code May challenge follow: </h3>
 <ul>
 <li>
