@@ -8,9 +8,10 @@ const arrayRotation = (arr, d) => {
       tempArr.push(arr.shift());
       iterator++;
     }
-  return arr.concat(tempArr);
+  // return arr.concat(tempArr);
+  return [...arr, ...tempArr];
 };
 
 const arr = [1, 2, 3, 4, 5, 6];
 const d = 3;
-console.log(arrayRotation(arr, d));
+console.log(arrayRotation(arr, d)); 

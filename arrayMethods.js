@@ -36,3 +36,10 @@ const argumentsTest = (a) => {
   console.log(foo);
 };
 argumentsTest(2);
+
+function numberOperations(...args) {
+  const result = args.reduce((acc, value) => acc + value, 0);
+  console.log(result);
+}
+
+numberOperations([3, 1, 4, 5]);
