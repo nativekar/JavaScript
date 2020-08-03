@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <title>File Uploader</title>
+    <style type="text/css">
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-body">
+      <article></article>
+      <form>
+        <input type="file" id="myFile" name="filename" />
+      </form>
+      <button onclick="handleSubmit()">Upload</button>
+    </div>
+
+    <section>
+      <p>
+        <a href="#panel1" class="accordion" onclick="toggleAccordion(event)"
+          >How does this work?</a
+        >
+      </p>
+      <div id="panel1" class="panel">
+        <p>
+          A simple uploader that <b>only</b> allows for a
+          <i> .pdf and .doc</i> file to be uploaded. This uploaded file is not
+          posted or sent to any server.
+        </p>
+      </div>
+      <p>
+        <a href="#panel2" class="accordion" onclick="toggleAccordion(event)"
+          >Why make this?</a
+        >
+      </p>
+      <div id="panel2" class="panel">
+        <p>
+          Just an exercise to play around with Vanilla JS and synthetic event
+          handling.
+        </p>
+      </div>
+      <p>
+        <a href="#panel3" class="accordion" onclick="toggleAccordion(event)"
+          >Who made this?</a
+        >
+      </p>
+      <div id="panel3" class="panel">
+        Made with minimal effort by:
+        <ul>
+          <li>
+            nativeKar
+          </li>
+          <p>
+            and
+          </p>
+          <li>
+            Vaibhav
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      const handleSubmit = () => {
+        let file = document.getElementById("myFile");
+        const extension = file.files[0].name.split(".");
+        const allowedTypes = ["pdf", "doc"];
+        const uploadedType = extension[extension.length - 1];
+        if (allowedTypes.includes(uploadedType)) {
+          console.log(`valid file type ${uploadedType}`);
+        } else {
+          alert("Invalid file type");
+        }
+      };
+
+      const toggleAccordion = (e) => {
+        const panel = document.querySelector(e.target.hash);
+        debugger;
+        e.preventDefault();
+        if (panel.style.display == "block") {
+          panel.style.display = "none";
+        } else if (panel.style.display == "none") {
+          panel.style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>
