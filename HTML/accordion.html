@@ -111,6 +111,7 @@
     </section>
 
     <script>
+      /* upload handler function */
       const handleSubmit = () => {
         let file = document.getElementById("myFile");
         const extension = file.files[0].name.split(".");
@@ -123,6 +124,7 @@
         }
       };
 
+      /* Accordion handler function */
       const toggleAccordion = (e) => {
         const panel = document.querySelector(e.target.hash);
         e.preventDefault();
