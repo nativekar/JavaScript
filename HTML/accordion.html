@@ -2,45 +2,67 @@
   <head>
     <title>File Uploader</title>
     <style type="text/css">
-      .accordion {
-        background-color: #eee;
-        color: #444;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s;
+      body {
+        color: #fff;
+        background-color: #000;
+        margin: 0;
+        text-align: center;
+      }
+      #upload {
+        margin-top: 200px;
+        display: inline-block;
+      }
+      #upload-btn {
+        margin: 10px;
       }
       .panel {
-        padding: 0 18px;
+        font-size: 15px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         display: none;
-        background-color: white;
         overflow: hidden;
       }
       .panel.active {
         display: block;
       }
+      ul {
+        list-style-type: none;
+      }
+      .linked {
+        color: red;
+        text-decoration: none;
+      }
+      #tag {
+        font-size: 25px;
+        font-family: monospace;
+      }
+      button {
+        border-radius: 15%;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
     </style>
   </head>
 
   <body>
-    <div class="content-body" style="width: 100%;">
-      <div style="width: 50%;">
+    <div class="content-body">
+      <div id="upload">
         <form>
           <input type="file" id="myFile" name="filename" />
         </form>
       </div>
-      <div style="width: 50%;">
+      <div id="upload-btn">
         <button onclick="handleSubmit()">Upload</button>
       </div>
     </div>
     <br />
     <br />
     <section style="width: 100%;">
-      <p>
+      <p id="tag">
         <a href="#panel1" class="accordion" onclick="toggleAccordion(event)"
           >How does this work?</a
         >
@@ -52,18 +74,18 @@
           posted or sent to any server.
         </p>
       </div>
-      <p>
+      <p id="tag">
         <a href="#panel2" class="accordion" onclick="toggleAccordion(event)"
           >Why make this?</a
         >
       </p>
       <div id="panel2" class="panel">
         <p>
-          Just an exercise to play around with Vanilla JS and synthetic event
+          Just an exercise to play around with Vanilla JS and native event
           handling.
         </p>
       </div>
-      <p>
+      <p id="tag">
         <a href="#panel3" class="accordion" onclick="toggleAccordion(event)"
           >Who made this?</a
         >
@@ -72,13 +94,17 @@
         Made with minimal effort by:
         <ul>
           <li>
-            nativeKar
+            <a class="linked" href="https://www.github.com/nativeKar"
+              >nativeKar</a
+            >
           </li>
           <p>
             and
           </p>
           <li>
-            Vaibhav
+            <a class="linked" href="https://www.github.com/Vaibhav80"
+              >Vaibhav</a
+            >
           </li>
         </ul>
       </div>
