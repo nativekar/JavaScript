@@ -1,0 +1,105 @@
+<html lang="en">
+  <meta charset="UTF-8" />
+
+  <head>
+    <title>
+      Star Rating
+    </title>
+    <style>
+      body {
+        margin: 0;
+        color: #fff;
+        background-color: #000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        color: red;
+        font-size: 40px;
+      }
+      .container {
+        margin: auto;
+        text-align: center;
+        margin-top: 200px;
+      }
+      .rating-wrapper {
+        direction: rtl;
+      }
+      .rating-wrapper input {
+        display: none;
+      }
+      .rating-wrapper label {
+        display: inline-block;
+        width: 150px;
+        position: relative;
+        cursor: pointer;
+      }
+      .rating-wrapper label:before {
+        content: "\2605";
+        display: inline-block;
+        font-size: 120px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .rating-wrapper label:after {
+        content: "\2605";
+        display: inline-block;
+        font-size: 120px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: yellow;
+        opacity: 0;
+      }
+      .rating-wrapper label:hover:after,
+      .rating-wrapper label:hover ~ label:after,
+      .rating-wrapper input:checked ~ label:after {
+        opacity: 1;
+      }
+      .credits {
+        margin: auto;
+        text-align: center;
+        margin-top: 250px;
+        font-size: 35px;
+        font-family: monospace;
+      }
+      .linked {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Star Rating using CSS</h1>
+      <div class="rating-wrapper">
+        <input type="radio" name="rating" id="star-1" /><label
+          for="star-1"
+        ></label>
+        <input type="radio" name="rating" id="star-2" />
+        <label for="star-2"></label>
+        <input type="radio" name="rating" id="star-3" />
+        <label for="star-3"></label>
+        <input type="radio" name="rating" id="star-4" />
+        <label for="star-4"></label>
+        <input type="radio" name="rating" id="star-5" />
+        <label for="star-5"></label>
+      </div>
+
+      <div class="credits">
+        <h4>
+          Made with <b> &#128151;</b> by
+          <a class="linked" href="https://www.github.com/nativeKar"
+            >nativeKar</a
+          >
+          with the help of
+          <a class="linked" href="https://www.youtube.com/watch?v=XjF0d_eiP0s"
+            >this</a
+          >
+          tutorial <b>&#x1F609;</b>.
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>
