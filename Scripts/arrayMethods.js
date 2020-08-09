@@ -43,3 +43,107 @@ function numberOperations(...args) {
 }
 
 numberOperations([3, 1, 4, 5]);
+
+/* Using the functional paradigm */
+const person = {
+  name: "Jimmy Pears",
+  age: "40",
+  email: "jimmy@xyz.com",
+  cell: "123456789",
+};
+
+const careerData = {
+  title: "Software Dev",
+  company: "ABC",
+};
+
+const personWithCareerData = { ...person, ...careerData };
+personWithCareerData;
+
+const updates = {
+  name: "Dean Smith",
+};
+
+const updatedPerson = {
+  ...person,
+  ...updates,
+};
+
+updatedPerson;
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const tripled = (x) => x * 3;
+
+const tripledArr = arr.map(tripled);
+
+tripledArr;
+
+const isEven = (x) => x % 2 == 0;
+
+const evenNumbers = arr.filter(isEven);
+
+evenNumbers;
+
+const words = ["hello", "here", "hare", "heir", "California"];
+
+const isLonger = (length) => (word) => word.length > length;
+
+const longWords = words.filter(isLonger(5));
+
+longWords;
+
+const employees = [
+  {
+    name: "John Doe",
+    salary: 1100000,
+  },
+  {
+    name: "Jane Doe",
+    salary: 6075000,
+  },
+  {
+    name: "Jill Doe",
+    salary: 105000,
+  },
+  {
+    name: "Jake Doe",
+    salary: 450000,
+  },
+];
+
+const makesAMillion = (employee) => employee.salary > 1000000;
+
+const employeesMakingAMillion = employees.every(makesAMillion);
+
+employeesMakingAMillion;
+
+const formValues = ["Mike", "Spectre", "24", ""];
+
+const isNotEmpty = (string) => !!string;
+
+const allFieldsFilled = formValues.every(isNotEmpty);
+
+allFieldsFilled;
+
+const subSet = arr.slice().reverse();
+
+subSet;
+
+const mixedUpNumbers = [10, 4, 6, 8, 9, 2, 3, 5, 7, 1];
+
+const ascending = (a, b) => a - b;
+
+const descending = (a, b) => b - a;
+
+const sortedArr = mixedUpNumbers.slice().sort(ascending);
+
+sortedArr;
+
+const numberArr = [10, 20, 30, 40, 50, 60];
+
+const sum = numberArr.reduce((acc, element) => {
+  return acc + element;
+}, 0);
+
+sum;
