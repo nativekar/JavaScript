@@ -26,7 +26,7 @@ const fetchLine = (users, parent) => {
   return breadCrumb;
 };
 
-// console.log(fetchLine(users, "users"));
+console.log(fetchLine(users, "users"));
 
 const categories = {
   id: "e_id_1",
