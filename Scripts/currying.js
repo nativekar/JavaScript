@@ -5,7 +5,7 @@ const multiply = (x, y) => {
 };
 
 /* setting x to always equal 3 */
-const multiplyByX = multiply.bind(this, 3);
+const multiplyByX = multiply.bind("", 3);
 multiplyByX(3);
 
 /* Using closures */
