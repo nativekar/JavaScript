@@ -23,7 +23,6 @@ const createQueue = (maxLength = 15) => {
       return `Queue underflow`;
     } else {
       _queue.shift();
-      _front = 0;
     }
   };
 
