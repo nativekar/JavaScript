@@ -5,15 +5,15 @@ This here is an attempt to build a Queue by extending (or limiting) a JavaScript
 
 const createQueue = (maxLength = 15) => {
   const _queue = [];
-  let _first = 0;
-  let _last = maxLength - 1;
+  let _front = 0;
+  let _rear = maxLength - 1;
 
   const enqueue = (value) => {
-    if (_last == maxLength) {
+    if (_rear == maxLength) {
       return `Queue overflow`;
     } else {
-      _queue[_first] = value;
-      _first++;
+      _queue[_front] = value;
+      _front++;
     }
   };
 
@@ -23,18 +23,18 @@ const createQueue = (maxLength = 15) => {
       return `Queue underflow`;
     } else {
       _queue.shift();
-      _first = 0;
+      _front = 0;
     }
   };
 
   const getFront = () => {
-    if (_first < 0) return `Queue empty`;
+    if (_front < 0) return `Queue empty`;
     else return _queue[0];
   };
 
   const getRear = () => {
     const length = _queue.length - 1;
-    if (_first < 0) return `Queue empty`;
+    if (_front < 0) return `Queue empty`;
     else return _queue[length];
   };
 
