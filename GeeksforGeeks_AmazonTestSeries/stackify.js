@@ -46,9 +46,9 @@ const createStack = (maxLength = 10) => {
   inside the stack  however, this can be changed to return the element that was found and null when it isn't */
   function search(val, returnType = "Boolean") {
     let found;
-    returnType == "Boolean" ? (found = false) : (found = null);
+    returnType === "Boolean" ? (found = false) : (found = null);
     while (_top > -1) {
-      if (_stack[_top] === val) {
+      if (_stack[_top] == val) {
         returnType == "Boolean" ? (found = true) : (found = _stack[_top]);
         break;
       } else _top--;
