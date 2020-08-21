@@ -4,9 +4,12 @@
 
 <p> Each problem will be saved in file of its own. Every time a new file is added, readme is to be updated. </p>
 
-<mark> It was becoming increasingly difficult to update this file with every algorithm - you can find solutions to <b> JavaScript </b> questions that Viabhav and I have been asked in interviews.
+<p>
+<mark> 
+It was becoming increasingly difficult to update this file with every algorithm - you can find solutions to <b> JavaScript </b> questions that Vaibhav and I have been asked in interviews.
 For general DS and Algorithm problems - visit <code> JavaScript -> GeeksforGeeks </code>
 </mark>
+</p>
 
 <ul>
 
