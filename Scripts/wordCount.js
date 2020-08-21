@@ -1,4 +1,4 @@
-const characterCount = sampleInputData => {
+const characterCount = (sampleInputData) => {
   const simplifiedData = sampleInputData.split("\n");
   const K = parseInt(simplifiedData[0]);
   const N = parseInt(simplifiedData[1]);
