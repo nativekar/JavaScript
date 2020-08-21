@@ -1,8 +1,12 @@
 # Miscellaneous
 
-<h2> <a href="https://github.com/nativekar">nativeKar</a> and <a href="https://github.com/Vaibhav80">Vaibhav80 </a>'s collabrative effort in solving frequently asked coding questions using JavaScript. </h2>
+<h2> <a href="https://linkedin.com/in/nativekar">nativeKar</a> and <a href="https://www.linkedin.com/in/ybhav/">Vaibhav's </a>'s collaborative effort in solving frequently asked coding questions using JavaScript. </h2>
 
-<p> Each problem will be saved in file of its own. Everytime a new file is added, readme is to be updated. </p>
+<p> Each problem will be saved in file of its own. Every time a new file is added, readme is to be updated. </p>
+
+<mark> It was becoming increasingly difficult to update this file with every algorithm - you can find solutions to <b> JavaScript </b> questions that Viabhav and I have been asked in interviews.
+For general DS and Algorithm problems - visit <code> JavaScript -> GeeksforGeeks </code>
+</mark>
 
 <ul>
 
