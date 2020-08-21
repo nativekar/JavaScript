@@ -1,18 +1,22 @@
 const lastRepeatingChar = (inputStr) => {
   let arr = inputStr.split("");
-  arr.sort();
+  arr.sort((a, b) => {
+    return b.charCodeAt() - a.charCodeAt();
+  });
+
+  console.log(arr);
+
   let arrSet = new Set(arr);
-  let charMap = {};
-  let recurringChar = "";
+
+  console.log(arrSet);
+
   for (let el of arrSet) {
-    const lowerEl = el.toLowerCase();
-    if (!charMap[lowerEl]) {
-      charMap[lowerEl] = 1;
-    } else if (recurringChar < lowerEl) {
-      recurringChar = lowerEl;
+    const upperChar = el.toUpperCase();
+    if (arrSet.has(upperChar)) {
+      return upperChar;
     }
   }
-  return recurringChar;
+  return undefined;
 };
 
 const str = "AbcadBeeAaCe";
