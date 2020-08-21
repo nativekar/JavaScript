@@ -5,7 +5,7 @@ const responseAccumulator = (fn, d) => {
         const args = arguments;
         clearTimeout(timer);
         timer = setTimeout(() => {
-            GamepadHapticActuator.apply(context, args);
+            fn.apply(context, args);
         }, d);
     }
 };
