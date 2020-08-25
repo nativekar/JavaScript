@@ -49,7 +49,7 @@ const createStack = (maxLength = 10) => {
     returnType === "Boolean" ? (found = false) : (found = null);
     while (_top > -1) {
       if (_stack[_top] == val) {
-        returnType == "Boolean" ? (found = true) : (found = _stack[_top]);
+        returnType === "Boolean" ? (found = true) : (found = _stack[_top]);
         break;
       } else _top--;
     }
