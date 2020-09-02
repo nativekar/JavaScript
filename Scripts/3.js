@@ -1,5 +1,4 @@
 import React from "react";
-
 import ShowsListComponent from "./ShowList";
 import ShowsDetailsComponent from "./ShowDetails";
 
