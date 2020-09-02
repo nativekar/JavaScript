@@ -51,21 +51,27 @@ class ShowsComponent extends React.Component {
   };
 
   render() {
+    const { errorMsg, showList, showSelected } = this.state;
+
     // render ShowsListComponent and ShowsDetailsComponent conditionally depending of flag state
-    return (
-      <div className="row">
-        {/* If errorMsg is '', render ShowsListComponent by passing every element of 'showList' as 
-        a "showSelected" prop. HINT: USE map() METHOD HERE.
-                    else invoke this.errorView()                    
-                    DONOT REMOVE THE EXISTING PROP HERE  */}
-        return (
-        <ShowsListComponent
-          showSelected={`each element of show array`}
-          detailObj={(obj) => this.selectedObj(obj)}
-        />
-        )
-      </div>
-    );
+    if (errorMsg === "") {
+      return (
+        <div className="row">
+          {/* If errorMsg is '', render ShowsListComponent by passing every element of 'showList' as 
+          a "showSelected" prop. HINT: USE map() METHOD HERE.
+                      else invoke this.errorView()                    
+                      DONOT REMOVE THE EXISTING PROP HERE  */}
+
+          {showList &&
+            showList.map((show) => (
+              <ShowsListComponent
+                showSelected={show}
+                detailObj={(obj) => this.selectedObj(obj)}
+              />
+            ))}
+        </div>
+      );
+    }
 
     return (
       <div>
@@ -73,7 +79,10 @@ class ShowsComponent extends React.Component {
                     pass state variable "showSelected" as a prop to ShowsDetailsComponent
                     DONOT REMOVE THE EXISTING PROP HERE */}
 
-        <ShowsDetailsComponent selectedObj={""} goBack={() => this.goBack()} />
+        <ShowsDetailsComponent
+          selectedObj={showSelected}
+          goBack={() => this.goBack()}
+        />
       </div>
     );
   }
