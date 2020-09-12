@@ -12,7 +12,11 @@ For general DS and Algorithm problems - visit <code> JavaScript -> GeeksforGeeks
 </p>
 
 <ul>
+<li>
+smallestNumber - Given a number X - P(X) is 0 when the number of divisors of X are even and P(X) is 1 when the number of divisors are odd. Find the smallest number Y such that P(X) !== P(Y).
 
+Example - X = 3 => P(3) = 0 should return Y = 4 since P(4) = 1 and 1 != 0 and 4 is the smallest number after 3.
+</li>
 <li>
 wordCount - Given an input string of 'K' and 'N', where K denotes a number and N the range, find the number of times K can be found in range N. Example, if "2 35" is the input, the algorithm should determine how many times the number 2 repeats within range 0-35.
 </li>
