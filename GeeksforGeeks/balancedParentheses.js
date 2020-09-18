@@ -8,7 +8,6 @@ const balancedParentheses = (exp) => {
       _stack.push(char);
       continue;
     }
-
     switch (char) {
       case ")":
         _stack.pop();
