@@ -1,0 +1,23 @@
+const pairSumsToK = (nums, target_num) => {
+  const map = [];
+  const indexnum = [];
+  for (let x = 0; x < nums.length; x++)
+  {
+  if (map[nums[x]] != null)
+  {
+  let index = map[nums[x]];
+  indexnum[0] = index;
+  indexnum[1] = x;
+  break;
+  }
+  else
+  {
+  map[target_num - nums[x]] = x;
+  }
+  }
+  return indexnum;
+  }
+
+const arr = [10, 25, 34, 66, 94, 1, 150, 85];
+const targetSum = 120;
+console.log(pairSumsToK (arr, targetSum);
