@@ -6,4 +6,4 @@ const numOfCombinations = (n) => {
 	return result;
 }
 
-numOfCombinations(4);
+console.log(numOfCombinations(4));
