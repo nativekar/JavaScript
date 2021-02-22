@@ -3,9 +3,9 @@ const twoSum = (arr = [], target = 0) => {
   for (let i = 0; i < arr.length; i++) {
     const currentValue = arr[i];
     const neededValue = target - currentValue;
-    const index2 = previousValues[neededValue];
-    if (index2 != null) {
-      return [index2, i];
+    const index = previousValues[neededValue];
+    if (index) {
+      return [index, i];
     } else {
       previousValues[currentValue] = i;
     }
