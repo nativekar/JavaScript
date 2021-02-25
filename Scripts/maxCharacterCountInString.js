@@ -13,10 +13,7 @@ const maxCharCount = (str) => {
 };
 
 const getMax = (charMap = {}) => {
-  const sortable = [];
-  for (let char in charMap) {
-    sortable.push([char, charMap[char]]);
-  }
+  const sortable = Object.entries(charMap);
   sortable.sort((a, b) => b[1].count - a[1].count);
   return sortable[0];
 };
