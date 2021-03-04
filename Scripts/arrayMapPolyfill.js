@@ -6,3 +6,15 @@ if(!Array.prototype.map){
     return rv;
    }
   };
+
+/* or */
+
+if(!Array.prototype.map){
+Array.prototype.map = function(cb) {
+    let newArray = [];
+    for(let item of this) {
+        newArray.push(cb(item));
+    }
+    return newArray;
+  }
+};
