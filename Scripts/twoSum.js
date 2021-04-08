@@ -3,15 +3,14 @@ const twoSum = (arr = [], target = 0) => {
   for (let i = 0; i < arr.length; i++) {
     const currentValue = arr[i];
     const neededValue = target - currentValue;
-    const index = previousValues[neededValue];
-    if (previousValue[neededValue] != null) {
-      return [previousValue[neededValue], i];
+    if (previousValues[neededValue] != null) {
+      return [previousValues[neededValue], i];
     } else {
-      previousValue[currentValue] = i;
+      previousValues[currentValue] = i;
     }
   }
 };
 
-const arr = [2, 7, 11, 15, 18, 22];
-const value = 40;
+const arr = [2, 3, 11, 5, 18, 7];
+const value = 9;
 console.log(twoSum(arr, value));
