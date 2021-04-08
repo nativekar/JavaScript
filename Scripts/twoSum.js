@@ -4,10 +4,10 @@ const twoSum = (arr = [], target = 0) => {
     const currentValue = arr[i];
     const neededValue = target - currentValue;
     const index = previousValues[neededValue];
-    if (index) {
-      return [index, i];
+    if (previousValue[neededValue] != null) {
+      return [previousValue[neededValue], i];
     } else {
-      previousValues[currentValue] = i;
+      previousValue[currentValue] = i;
     }
   }
 };
