@@ -13,7 +13,7 @@ function getRepeated(input) {
       while (i + 1 < input.length && input[i + 1] == input[i]) {
         i++;
       }
-      resultArr.push([i, startIndex]);
+      resultArr.push([startIndex, i]);
     } else {
       i++;
     }
