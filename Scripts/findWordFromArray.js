@@ -1,3 +1,5 @@
+/*given an array of strings and a string - check if the given string can be formed by concatenating the strings in the array */
+
 const findWord = (word, arr) => {
   let wordMap = {};
   // Build a map with subStringIndex and subString
