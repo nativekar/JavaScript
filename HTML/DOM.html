@@ -1,0 +1,42 @@
+<!-- assuming both the DOM trees have this sort of a structure-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Facebook DOM Traversal</title>
+  </head>
+  <body>
+    <div id="rootA">
+      <div>
+        <div></div>
+      </div>
+
+      <div></div>
+
+      <div>
+        <div>
+          <div id="nodeA"></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rootB">
+      <div>
+        <div></div>
+      </div>
+
+      <div></div>
+
+      <div>
+        <div>
+          <div id="nodeB"></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="domTraversal.js" defer></script> -->
+  </body>
+</html>
