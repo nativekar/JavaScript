@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Calculator</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      .result {
+        margin: 1.5rem;
+        text-align: center;
+      }
+    </style>
+    <div class="container">
+      <span class="op1">
+        <input type="text" id="op1" onChange="handleChange()" required />
+      </span>
+      <span class="symbol">
+        <input type="text" id="symbol" onChange="handleChange()" required />
+      </span>
+      <span class="op2">
+        <input type="text" id="op2" onChange="handleChange()" required />
+      </span>
+
+      <button onClick="calculate()">Calculate</button>
+    </div>
+
+    <div class="result">
+      <span id="result"> </span>
+    </div>
+
+    <script>
+      let op1 = "",
+        op2 = "",
+        symbol = "",
+        symbolType = "";
+      const id = document.querySelector("#result");
+
+      const handleChange = () => {
+        if (event.target.id == "op1") op1 = Number(event.target.value);
+        else if (event.target.id == "symbol")
+          symbol = event.target.value.toString();
+        else if (event.target.id == "op2") op2 = Number(event.target.value);
+      };
+
+      const determineSymbol = () => {
+        if (symbol == "+") {
+          symbolType = "add";
+        } else if (symbol == "-") {
+          symbolType = "subtract";
+        } else if (symbol == "*") {
+          symbolType = "multiply";
+        } else if (symbol == "/") {
+          symbolType = "divide";
+        } else if (symbol == "%") {
+          symbolType = "mod";
+        }
+      };
+
+      const calculate = () => {
+        determineSymbol();
+        let result = 0;
+        switch (symbolType) {
+          case "add":
+            result = op1 + op2;
+            break;
+          case "subtract":
+            result = op1 - op2;
+            break;
+          case "multiply":
+            result = op1 * op2;
+            break;
+          case "divide":
+            result = op1 / op2;
+            break;
+          case "mod":
+            result = op1 % op2;
+            break;
+          default:
+            result = result;
+        }
+        if (result !== 0) id.innerText = result;
+        else id.innerText = `Please enter correct values to be calculated!`;
+      };
+    </script>
+  </body>
+</html>
