@@ -1,61 +1,31 @@
-const merge = (arr, l, m, r) => {
-  const size1 = m - l + 1;
-  const size2 = r - m;
-  let leftArray = [];
-  let rightArray = [];
-  // Copy left subarray
-  for (let i = 0; i < size1; i++) {
-    leftArray.push(arr[l + i]);
-  }
-
-  // Copy right subarray
-  for (let j = 0; j < size2; j++) {
-    rightArray.push(arr[m + 1 + j]);
-  }
-
-  // Initial indexes of left and right subarrays
-  let i,
-    j = 0;
-
-  // Initial index of array
-  let k = l;
-
-  // Sort and Merge both subarrays
-  while (i < size1 && j < size2) {
-    if (leftArray[i] <= rightArray[j]) {
-      arr[k] = leftArray[i];
-      i++;
+function merge(left, right) {
+  let arr = []
+  // Break out of loop if any one of the array gets empty
+  while (left.length && right.length) {
+    // Pick the smaller among the smallest element of left and right sub arrays 
+    if (left[0] < right[0]) {
+      arr.push(left.shift())
     } else {
-      arr[k] = rightArray[j];
-      j++;
+      arr.push(right.shift())
     }
-    k++;
   }
 
-  // Copy remaining elements
-  while (i < size1) {
-    arr[k] = leftArray[i];
-    i++;
-    k++;
+  // Concatenating the leftover elements
+  // (in case we didn't go through the entire left or right array)
+  return [...arr, ...left, ...right]
+}
+
+function mergeSort(array) {
+  const half = array.length / 2
+
+  // Base case or terminating case
+  if (array.length < 2) {
+    return array
   }
 
-  while (j < size2) {
-    arr[k] = rightArray[j];
-    j++;
-    k++;
-  }
-  return arr;
-};
+  const left = array.splice(0, half)
+  return merge(mergeSort(left), mergeSort(array))
+}
 
-const sort = (arr, l, r) => {
-  if (l < r) {
-    let m = Math.floor((l + r) / 2);
-    sort(arr, l, m);
-    sort(arr, m + 1, r);
-    merge(arr, l, m, r);
-  }
-};
-
-let arr = [12, 11, 7, 9, 2, 3, 10];
-sort(arr, 0, arr.length - 1);
-console.log(arr);
+const array = [12, 1, 7, 9, 13, 2, 10];
+console.log(mergeSort(array));
